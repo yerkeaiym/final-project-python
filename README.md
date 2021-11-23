@@ -35,8 +35,8 @@ Firstly, we create account and sing in with this account.
 After, we can see search page. Here, for example we searched bitcoin.
 ![alt text](https://user-images.githubusercontent.com/77783049/143140520-25712d3c-b785-41bd-ad27-0ac37fb9ee59.png)
 )
-![alt text](![image](https://user-images.githubusercontent.com/77783049/143140642-a1b3ce7c-e3f3-4d17-9b52-89c4f63c736a.png)
-
+![alt text](https://user-images.githubusercontent.com/77783049/143140642-a1b3ce7c-e3f3-4d17-9b52-89c4f63c736a.png)
+)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
