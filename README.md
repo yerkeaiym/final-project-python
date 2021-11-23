@@ -25,9 +25,13 @@ jwt - https://pyjwt.readthedocs.io/en/stable/
 
 ## Usage
 ```bash
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:erkeaiym2408@localhost/users'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'thisismyflasksecretkey'
+app.config.update(dict(
+    SECRET_KEY="powerful secretkey",
+    WTF_CSRF_SECRET_KEY="a csrf secret key"))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+
 ```
 
 ## Examples
