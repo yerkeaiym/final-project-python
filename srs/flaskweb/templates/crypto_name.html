@@ -1,0 +1,94 @@
+{% extends "temp_new.html" %}
+{% block content %}
+  <form method="POST" action="">
+    {
+        { form.hidden_tag() }
+    }
+    <fieldset class="form-group">
+        <h4>
+            {
+                { length_of_blog }
+            }
+        </h4>
+      <legend class="border-bottom mb-4">Get News or Blogs from Coingecko</legend>
+      <div class="form-group">
+        {
+            { form.coin_name.label(class="form-control-label") }
+        }
+
+        {% if form.coin_name.errors %}
+            {
+                { form.coin_name(class="form-control form-control-lg is-invalid") }
+            }
+            <div class="invalid_review">
+                {% for error in form.coin_name.errors %}
+                    <span>
+                        {
+                           { error }
+                        }
+                    </span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {
+                { form.coin_name(class="form-control form-control-lg") }
+            }
+        {% endif %}
+        </div>
+    </fieldset>
+    <div class="form-group">
+        {
+            { form.check(class="btn btn-outline-info") }
+        }
+    </div>
+  </form>
+  <br>
+
+
+
+ <div class="container">
+        <div class="row">
+
+            <div class="col">
+                {% for i in range(titleArr|length) %}
+                <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                                {
+                                   { titleArr[i] }
+                                }
+                            </h6>
+                            <div class="article-metadata">
+                                <p class="card-text" style="font-size:14px">
+                                {
+                                    { textArr[i]}
+                                }
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                </div>
+                <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">
+                            {
+                                { titleArr[i] }
+                            } : Summarized</h6>
+                            <div class="article-metadata">
+                                <p class="card-text" style="font-size:14px">
+                                {
+                                    { summText[i] }
+                                }</p>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                </div>
+                {% endfor %}
+         </div>
+
+
+
+
+{% endblock content %}
